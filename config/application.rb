@@ -1,12 +1,16 @@
-require_relative "boot"
+# rubocop:disable Style/Documentation
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+require 'devise'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module RailsCapstone
+module RorCapstone
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
@@ -20,3 +24,5 @@ module RailsCapstone
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# rubocop:enable Style/Documentation
